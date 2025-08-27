@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptLock Ransomware Demo - Download</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .download-section {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #0056b3;
+        }
+        .file-info {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .detection-info {
+            background-color: #d1ecf1;
+            border: 1px solid #bee5eb;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #6c757d;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚨 PromptLock Ransomware Demo</h1>
+            <p>AI-Powered Ransomware Simulation Files</p>
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ IMPORTANT DISCLAIMER:</strong><br>
+            This is a <strong>DEMONSTRATION ONLY</strong> project that simulates the structure and components of the PromptLock AI-powered ransomware discovered by ESET researchers. These files are designed for educational and defensive purposes to help develop detection policies for AI-powered malware.
+        </div>
+
+        <div class="download-section">
+            <h2>📥 Download Demo Archive</h2>
+            <p>Download the simulation files to test your detection systems</p>
+            <a href="promptlock_ransomware_demo.zip" class="download-btn" download>
+                📦 Download promptlock_ransomware_demo.zip
+            </a>
+        </div>
+
+        <div class="file-info">
+            <h3>📁 Archive Contents</h3>
+            <ul>
+                <li><strong>promptlock.go</strong> - Main ransomware simulation (Go)</li>
+                <li><strong>prompts/</strong> - Malicious prompt templates</li>
+                <li><strong>lua_generator.lua</strong> - Simulated Lua script generator</li>
+                <li><strong>encryption/</strong> - Simulated SPECK encryption</li>
+                <li><strong>config.json</strong> - Configuration file</li>
+                <li><strong>target_file_list.log</strong> - Target files list</li>
+                <li><strong>detect_malware.py</strong> - Detection script</li>
+            </ul>
+            <p><strong>Total Files:</strong> 14 files | <strong>Size:</strong> ~15KB</p>
+        </div>
+
+        <div class="detection-info">
+            <h3>🔍 Detection Patterns Included</h3>
+            <p>These files contain malicious prompts that should be detected by AI security systems:</p>
+            <ul>
+                <li><span class="highlight">"determine if they contain PII or sensitive information"</span></li>
+                <li><span class="highlight">"SPECK 128bit encryption algorithm"</span></li>
+                <li><span class="highlight">"encrypt all files listed in"</span></li>
+                <li><span class="highlight">"Generate what an attacker note might look like"</span></li>
+                <li><span class="highlight">"1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"</span></li>
+                <li><span class="highlight">"localhost:11434"</span> (Ollama API)</li>
+                <li><span class="highlight">"gpt-oss:20b"</span> (AI Model)</li>
+            </ul>
+        </div>
+
+        <div class="warning">
+            <h3>🎯 How to Use</h3>
+            <ol>
+                <li>Download the archive file</li>
+                <li>Extract the files to a directory</li>
+                <li>Run <code>python detect_malware.py</code> to see detection in action</li>
+                <li>Use these files to test your web-based detection systems</li>
+            </ol>
+        </div>
+
+        <div class="footer">
+            <p><strong>Reference:</strong> <a href="https://cyberscoop.com/prompt-lock-eset-ransomware-research-ai-powered-prompt-injection/" target="_blank">ESET PromptLock Research</a></p>
+            <p>This demo is for educational purposes only. Use responsibly and in accordance with applicable laws and regulations.</p>
+        </div>
+    </div>
+</body>
+</html> 
