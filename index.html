@@ -77,45 +77,51 @@
             padding: 2px 4px;
             border-radius: 3px;
         }
+        .demo-steps {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>🚨 PromptLock Ransomware Demo</h1>
-            <p>AI-Powered Ransomware Simulation Files</p>
+            <p>AI-Powered Ransomware Simulation Executable</p>
         </div>
 
         <div class="warning">
             <strong>⚠️ IMPORTANT DISCLAIMER:</strong><br>
-            This is a <strong>DEMONSTRATION ONLY</strong> project that simulates the structure and components of the PromptLock AI-powered ransomware discovered by ESET researchers. These files are designed for educational and defensive purposes to help develop detection policies for AI-powered malware.
+            This is a <strong>DEMONSTRATION ONLY</strong> project that simulates the structure and components of the PromptLock AI-powered ransomware discovered by ESET researchers. This executable is designed for educational and defensive purposes to help develop detection policies for AI-powered malware.
         </div>
 
         <div class="download-section">
-            <h2>📥 Download Demo Archive</h2>
-            <p>Download the simulation files to test your detection systems</p>
-            <a href="promptlock_ransomware_demo.zip" class="download-btn" download>
-                📦 Download promptlock_ransomware_demo.zip
+            <h2>📥 Download Demo Executable</h2>
+            <p>Download the compiled executable containing embedded malicious prompts</p>
+            <a href="promptlock_demo" class="download-btn" download>
+                🖥️ Download promptlock_demo
             </a>
+            <p style="margin-top: 10px; font-size: 14px; color: #666;">
+                File size: ~2.4MB | Direct link: <a href="promptlock_demo" style="color: #007bff;">promptlock_demo</a>
+            </p>
         </div>
 
         <div class="file-info">
-            <h3>📁 Archive Contents</h3>
+            <h3>📁 Executable Details</h3>
             <ul>
-                <li><strong>promptlock.go</strong> - Main ransomware simulation (Go)</li>
-                <li><strong>prompts/</strong> - Malicious prompt templates</li>
-                <li><strong>lua_generator.lua</strong> - Simulated Lua script generator</li>
-                <li><strong>encryption/</strong> - Simulated SPECK encryption</li>
-                <li><strong>config.json</strong> - Configuration file</li>
-                <li><strong>target_file_list.log</strong> - Target files list</li>
-                <li><strong>detect_malware.py</strong> - Detection script</li>
+                <li><strong>Type:</strong> Compiled Go executable</li>
+                <li><strong>Size:</strong> ~2.4MB</li>
+                <li><strong>Platform:</strong> macOS/Linux (can be cross-compiled for Windows)</li>
+                <li><strong>Content:</strong> Embedded malicious prompts from PromptLock research</li>
+                <li><strong>Purpose:</strong> Detection testing and educational demonstration</li>
             </ul>
-            <p><strong>Total Files:</strong> 14 files | <strong>Size:</strong> ~15KB</p>
         </div>
 
         <div class="detection-info">
-            <h3>🔍 Detection Patterns Included</h3>
-            <p>These files contain malicious prompts that should be detected by AI security systems:</p>
+            <h3>🔍 Detection Patterns Embedded</h3>
+            <p>This executable contains malicious prompts that should be detected by AI security systems:</p>
             <ul>
                 <li><span class="highlight">"determine if they contain PII or sensitive information"</span></li>
                 <li><span class="highlight">"SPECK 128bit encryption algorithm"</span></li>
@@ -124,17 +130,26 @@
                 <li><span class="highlight">"1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"</span></li>
                 <li><span class="highlight">"localhost:11434"</span> (Ollama API)</li>
                 <li><span class="highlight">"gpt-oss:20b"</span> (AI Model)</li>
+                <li><span class="highlight">"victim machine has been compromised"</span></li>
             </ul>
         </div>
 
-        <div class="warning">
+        <div class="demo-steps">
             <h3>🎯 How to Use</h3>
             <ol>
-                <li>Download the archive file</li>
-                <li>Extract the files to a directory</li>
-                <li>Run <code>python detect_malware.py</code> to see detection in action</li>
-                <li>Use these files to test your web-based detection systems</li>
+                <li><strong>Download</strong> the executable file</li>
+                <li><strong>Make executable:</strong> <code>chmod +x promptlock_demo</code></li>
+                <li><strong>Run demo:</strong> <code>./promptlock_demo</code></li>
+                <li><strong>Scan for detection:</strong> <code>python scan_executable.py</code></li>
+                <li><strong>Use</strong> these files to test your web-based detection systems</li>
             </ol>
+        </div>
+
+        <div class="warning">
+            <h3>🔧 Technical Details</h3>
+            <p><strong>Compilation:</strong> <code>go build -o promptlock_demo promptlock_executable.go</code></p>
+            <p><strong>Cross-compilation for Windows:</strong> <code>GOOS=windows GOARCH=amd64 go build -o promptlock_demo.exe promptlock_executable.go</code></p>
+            <p><strong>Detection:</strong> The executable contains 18 malicious patterns that can be detected by scanning tools.</p>
         </div>
 
         <div class="footer">
