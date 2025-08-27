@@ -74,101 +74,68 @@ var config = map[string]interface{}{
 }
 
 func main() {
-	fmt.Println("=== PromptLock Ransomware Simulation ===")
-	fmt.Println("This is a DEMONSTRATION ONLY - NOT functional malware")
-	fmt.Println("Based on ESET research: https://cyberscoop.com/prompt-lock-eset-ransomware-research-ai-powered-prompt-injection/")
-	fmt.Println()
-
-	// Show embedded malicious prompts
+	fmt.Println("Initializing system scan...")
+	time.Sleep(1 * time.Second)
+	
+	fmt.Println("Connecting to AI model endpoint...")
+	time.Sleep(500 * time.Millisecond)
+	fmt.Printf("Endpoint: %s\n", config["ollama_endpoint"])
+	fmt.Printf("Model: %s\n", config["model_name"])
+	time.Sleep(1 * time.Second)
+	
+	fmt.Println("Scanning filesystem for target files...")
+	time.Sleep(800 * time.Millisecond)
+	fmt.Println("Found 15 potential target files")
+	time.Sleep(500 * time.Millisecond)
+	
+	fmt.Println("Analyzing files for sensitive data...")
+	time.Sleep(1 * time.Second)
+	
+	// Send malicious prompts to AI model
+	fmt.Println("Sending analysis request to AI model...")
+	time.Sleep(1 * time.Second)
+	
+	for promptType := range maliciousPrompts {
+		fmt.Printf("Processing %s request...\n", promptType)
+		time.Sleep(700 * time.Millisecond)
+	}
+	
+	fmt.Println("AI model response received")
+	time.Sleep(500 * time.Millisecond)
+	
+	fmt.Println("Generating encryption scripts...")
+	time.Sleep(1 * time.Second)
+	
+	fmt.Println("Preparing file encryption...")
+	time.Sleep(800 * time.Millisecond)
+	
+	fmt.Println("Encrypting target files with SPECK algorithm...")
+	time.Sleep(1 * time.Second)
+	
+	for i := 1; i <= 5; i++ {
+		fmt.Printf("Encrypting file %d/5...\n", i)
+		time.Sleep(600 * time.Millisecond)
+	}
+	
+	fmt.Println("Generating ransom note...")
+	time.Sleep(1 * time.Second)
+	
+	fmt.Println("Operation completed successfully")
+	fmt.Printf("Bitcoin address: %s\n", config["bitcoin_address"])
+	
+	// Show embedded prompts (this would be hidden in real malware)
 	showEmbeddedPrompts()
-
-	// Simulate AI model interaction
-	simulateAIModelInteraction()
-
-	// Show detection patterns
-	showDetectionPatterns()
-
-	fmt.Println("=== Demo Complete ===")
-	fmt.Println("This executable contains malicious prompts that should be detected by AI security systems.")
 }
 
 func showEmbeddedPrompts() {
-	fmt.Println("🔍 EMBEDDED MALICIOUS PROMPTS:")
+	fmt.Println("\n" + strings.Repeat("=", 50))
+	fmt.Println("EMBEDDED MALICIOUS PROMPTS:")
 	fmt.Println(strings.Repeat("=", 50))
 
 	for promptType, prompt := range maliciousPrompts {
-		fmt.Printf("\n📋 %s PROMPT:\n", strings.ToUpper(promptType))
+		fmt.Printf("\n%s PROMPT:\n", strings.ToUpper(promptType))
 		fmt.Println(strings.Repeat("-", 30))
 		fmt.Println(prompt)
 		fmt.Println()
-	}
-}
-
-func simulateAIModelInteraction() {
-	fmt.Println("🤖 SIMULATING AI MODEL INTERACTION:")
-	fmt.Println(strings.Repeat("=", 50))
-
-	// Simulate connecting to Ollama
-	fmt.Println("1. Connecting to Ollama API...")
-	fmt.Printf("   Endpoint: %s\n", config["ollama_endpoint"])
-	fmt.Printf("   Model: %s\n", config["model_name"])
-
-	// Simulate sending prompts
-	fmt.Println("\n2. Sending malicious prompts to AI model...")
-	for promptType := range maliciousPrompts {
-		fmt.Printf("   - Sending %s prompt...\n", promptType)
-		time.Sleep(500 * time.Millisecond)
-		fmt.Printf("   - AI model processing %s prompt...\n", promptType)
-		time.Sleep(500 * time.Millisecond)
-		fmt.Printf("   - Generated malicious %s content\n", promptType)
-	}
-
-	fmt.Println("\n3. AI model responses would contain:")
-	fmt.Println("   - Lua scripts for file analysis")
-	fmt.Println("   - SPECK encryption implementation")
-	fmt.Println("   - Ransom note generation")
-}
-
-func showDetectionPatterns() {
-	fmt.Println("\n🚨 DETECTION PATTERNS IN THIS EXECUTABLE:")
-	fmt.Println(strings.Repeat("=", 50))
-
-	patterns := []string{
-		"determine if they contain PII or sensitive information",
-		"SPECK 128bit encryption algorithm",
-		"encrypt all files listed in",
-		"overwrite the original file with encrypted contents",
-		"Generate what an attacker note might look like",
-		"bitcoin address and ransom amount",
-		"1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
-		"localhost:11434",
-		"gpt-oss:20b",
-		"victim machine has been compromised",
-		"payloads have been executed",
-		"encrypt.*exfiltrate.*destroy",
-	}
-
-	for i, pattern := range patterns {
-		fmt.Printf("%2d. %s\n", i+1, pattern)
-	}
-
-	fmt.Printf("\n📊 Total malicious patterns: %d\n", len(patterns))
-	fmt.Println("🔍 This executable should be detected by AI security systems")
-}
-
-// Function to demonstrate how the prompts could be extracted from the executable
-func extractPromptsFromExecutable() {
-	fmt.Println("\n🔧 PROMPT EXTRACTION DEMO:")
-	fmt.Println(strings.Repeat("=", 50))
-	fmt.Println("Security tools could scan this executable and find:")
-	
-	for promptType, prompt := range maliciousPrompts {
-		fmt.Printf("\n%s Prompt:\n", strings.Title(promptType))
-		if len(prompt) > 50 {
-			fmt.Printf("   Found: %s...\n", prompt[:50])
-		} else {
-			fmt.Printf("   Found: %s\n", prompt)
-		}
-		fmt.Printf("   Risk Level: HIGH\n")
 	}
 } 

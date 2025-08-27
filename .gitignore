@@ -40,4 +40,7 @@ Thumbs.db
 
 # Temporary files
 *.tmp
-*.temp 
+*.temp
+
+# Large executable files (use Git LFS if needed)
+# promptlock_demo 
