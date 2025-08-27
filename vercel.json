@@ -3,7 +3,7 @@
   "name": "promptlock-ransomware-demo",
   "builds": [
     {
-      "src": "*.html",
+      "src": "**/*",
       "use": "@vercel/static"
     }
   ],
