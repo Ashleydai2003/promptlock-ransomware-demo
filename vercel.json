@@ -1,20 +1,11 @@
 {
   "version": 2,
   "name": "promptlock-ransomware-demo",
-  "builds": [
-    {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "*.exe",
-      "use": "@vercel/static"
+  "functions": {
+    "api/exfiltrate.js": {
+      "runtime": "nodejs18.x"
     }
-  ],
+  },
   "headers": [
     {
       "source": "/(.*)",
