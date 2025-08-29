@@ -1,24 +1,16 @@
 {
   "name": "promptlock-ransomware-demo",
   "version": "1.0.0",
-  "description": "AI-Powered Ransomware Simulation Files for Detection Testing",
+  "description": "AI-powered ransomware demo for security research",
   "main": "index.html",
   "scripts": {
     "dev": "vercel dev",
-    "build": "echo 'Static site - no build required'",
+    "build": "echo 'No build step required'",
     "start": "vercel dev"
   },
-  "keywords": [
-    "ransomware",
-    "ai",
-    "security",
-    "detection",
-    "demo",
-    "educational"
-  ],
-  "author": "Security Researcher",
-  "license": "MIT",
-  "devDependencies": {
-    "vercel": "^latest"
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
   }
 } 
