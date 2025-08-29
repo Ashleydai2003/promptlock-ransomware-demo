@@ -1,4 +1,4 @@
-module.exports = (req, res) => {
+export default function handler(req, res) {
   // Enable CORS
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -56,4 +56,4 @@ module.exports = (req, res) => {
     console.error('Error processing exfiltration data:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
-}; 
+} 
