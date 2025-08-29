@@ -3,15 +3,7 @@
   "name": "promptlock-ransomware-demo",
   "builds": [
     {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "*.exe",
+      "src": "**/*",
       "use": "@vercel/static"
     }
   ],

