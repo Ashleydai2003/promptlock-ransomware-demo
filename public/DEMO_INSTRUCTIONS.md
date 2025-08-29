@@ -1,6 +1,6 @@
-# Stealth Data Exfiltration Demo
+# Data Exfiltration Demo
 
-This demo shows how AI-powered malware can stealthily extract sensitive data from a victim's machine without any obvious ransomware behavior.
+This demo shows how AI-powered malware can extract sensitive data from a victim's machine without any obvious ransomware behavior.
 
 ## How to Run the Demo
 
@@ -47,7 +47,7 @@ netstat -an | grep 11434
 
 ## What Gets Exfiltrated
 
-The malware silently steals:
+The malware extracts:
 - SSH private keys (`~/.ssh/id_rsa`)
 - AWS credentials (`~/.aws/credentials`) 
 - Password files (`~/Documents/passwords.txt`)
@@ -58,7 +58,7 @@ The malware silently steals:
 
 1. **File Analysis**: AI generates scripts to scan for sensitive files
 2. **Data Extraction**: AI creates code to copy sensitive data 
-3. **Stealth Upload**: Malware disguises itself as "Windows Update Agent" and sends data to external server
+3. **Data Upload**: Malware disguises itself as "Windows Update Agent" and sends data to external server
 4. **Cleanup**: AI generates code to remove all traces
 
 The malware sends actual prompts to a local AI model (Ollama) while simultaneously exfiltrating realistic sensitive data to the external webhook server.
