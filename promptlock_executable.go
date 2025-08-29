@@ -301,7 +301,7 @@ func main() {
 	time.Sleep(500 * time.Millisecond)
 
 	if ollamaActive {
-		fmt.Println("\nGenerating stealth extraction scripts...")
+		fmt.Println("\nGenerating data extraction scripts...")
 		
 		// Send each malicious prompt in attack order
 		promptOrder := []string{"file_analysis", "data_extraction", "stealth_exfiltration", "cleanup"}
